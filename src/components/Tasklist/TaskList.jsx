@@ -5,11 +5,10 @@ import CompleteTask from './CompleteTask';
 import FailedTask from './FailedTask';
 
 function TaskList({ loggedInUserData, setloggedInUserData }) {
-  // Initialize state with the provided `loggedInUserData`
   const [loggedInData, setLoggedInData] = useState(loggedInUserData || { tasks: [] });
 
   useEffect(() => {
-    // Update `loggedInData` whenever `loggedInUserData` changes
+    
     if (loggedInUserData) {
       setLoggedInData(loggedInUserData);
     }
@@ -20,7 +19,7 @@ function TaskList({ loggedInUserData, setloggedInUserData }) {
       id="tasklist"
       className="h-[55%] mt-10 flex items-center justify-start gap-5 flex-nowrap overflow-auto py-5"
     >
-      {/* Safely check if `tasks` is available */}
+      
       {loggedInData?.tasks?.length > 0 ? (
         loggedInData.tasks.map((elem, id) => {
           if (elem.active) {
@@ -49,10 +48,10 @@ function TaskList({ loggedInUserData, setloggedInUserData }) {
           if (elem.failed) {
             return <FailedTask key={id} data={elem} />;
           }
-          return null; // Add a fallback return in case no condition is met
+          return null; 
         })
       ) : (
-        <p className="text-white">No tasks available.</p> // Render fallback UI if no tasks exist
+        <p className="text-white">No tasks available.</p> 
       )}
     </div>
   );

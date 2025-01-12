@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Header({setUser, loggedInUserData}) {
 
-    // const [userName, setUserName] = useState(null);
     const logOutUser = () => {
         localStorage.setItem('loggedInUser','')
         // window.location.reload()

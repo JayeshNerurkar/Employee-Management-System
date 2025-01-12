@@ -1,10 +1,8 @@
 import { useContext, useEffect, useState } from 'react'
 import './App.css'
 import Login from './components/Auth/Login'
-import Header from './components/Other/Header'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
-import { setLocalStorage, getLocalStorage } from './utils/LocalStorage'
 import { AuthContext } from './context/AuthProvider'
 // localStorage.clear()
 

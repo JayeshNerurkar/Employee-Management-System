@@ -5,7 +5,7 @@ function NewTask({ task, employee, setloggedInUserData }) {
   const [userData, setUserData] = useContext(AuthContext);
 
   const handleTask = (employee, task) => {
-    // Update `userData` in the AuthContext
+    
     const updatedData = userData.map((elem) => {
       if (elem.firstName === employee.firstName) {
         const updatedTasks = elem.tasks.map((t) => {

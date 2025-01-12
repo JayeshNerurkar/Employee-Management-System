@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { AuthContext } from '../../context/AuthProvider'
 
 function AcceptTask({task, loggedInUserData, setloggedInUserData}) {
@@ -114,5 +114,4 @@ function AcceptTask({task, loggedInUserData, setloggedInUserData}) {
         </div>  
     )
 }
-// rounded font-semibold py-1 px-2 text-bold w-full
 export default AcceptTask
